@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Mode CSS Variables */
+:root {
+  --md-primary: #7C3AED;
+  --md-primary-container: #EDE9FE;
+  --md-secondary: #455a64;
+  --md-surface: #ffffff;
+  --md-surface-variant: #F8FAFC;
+  --md-on-surface: #0F172A;
+  --md-on-surface-variant: #64748B;
+  --md-outline: #E2E8F0;
+  --md-outline-variant: #CBD5E1;
+  --md-shadow-1: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.12);
+  --md-shadow-2: 0 3px 6px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.08);
+  --md-shadow-3: 0 10px 20px rgba(0,0,0,0.12), 0 6px 6px rgba(0,0,0,0.10);
+  --md-radius-sm: 8px;
+  --md-radius-md: 12px;
+  --md-radius-lg: 16px;
+  --md-radius-xl: 24px;
+  --md-radius-full: 9999px;
+  --md-bg-white: #ffffff;
+  --md-bg-gray-50: #F8FAFC;
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --border-color: #E2E8F0;
+  --input-bg: #ffffff;
+  --tooltip-bg: #1e293b;
+}
+
+/* Dark Mode CSS Variables — Deep Navy Theme */
+html.dark {
+  --md-primary: #A78BFA;
+  --md-primary-container: #2E1065;
+  --md-secondary: #94A3B8;
+  --md-surface: #0D1B2A;
+  --md-surface-variant: #1B2A3B;
+  --md-on-surface: #F1F5F9;
+  --md-on-surface-variant: #94A3B8;
+  --md-outline: rgba(255,255,255,0.08);
+  --md-outline-variant: rgba(255,255,255,0.12);
+  --md-shadow-1: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.6);
+  --md-shadow-2: 0 3px 6px rgba(0,0,0,0.55), 0 2px 4px rgba(0,0,0,0.5);
+  --md-shadow-3: 0 10px 20px rgba(0,0,0,0.6), 0 6px 6px rgba(0,0,0,0.55);
+  --md-bg-white: #0D1B2A;
+  --md-bg-gray-50: #1B2A3B;
+  --bg-primary: #0D1117;
+  --bg-secondary: #0D1B2A;
+  --bg-card: #0D1B2A;
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --border-color: rgba(255,255,255,0.08);
+  --input-bg: #0D1117;
+  --tooltip-bg: #0D1B2A;
+}
+
+.md-elevation-1 {
+  box-shadow: var(--md-shadow-1);
+}
+
+.md-elevation-2 {
+  box-shadow: var(--md-shadow-2);
+}
+
+.md-surface {
+  background-color: var(--md-surface-variant);
+}
+
+html.dark .md-surface {
+  background-color: var(--md-surface-variant);
+}
+
+/* RTL Scrollbar Fix - Force scrollbar to right */
+.rtl-scroll-fix {
+  direction: rtl;
+}
+
+.rtl-scroll-fix > * {
+  direction: ltr;
+}
+
+/* Thin Modern Scrollbars (Webkit) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* For RTL specific scrollbar positioning */
+[dir="rtl"] ::-webkit-scrollbar {
+  right: 0;
+  left: auto;
+}
+
+[dir="rtl"] ::-webkit-scrollbar-track {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+@media print {
+  @page {
+    size: 50mm 25mm;
+    margin: 0;
+  }
+
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  aside,
+  nav,
+  header,
+  footer,
+  .sidebar,
+  .navbar,
+  .no-print,
+  button,
+  input,
+  select,
+  textarea,
+  [role="navigation"],
+  [class*="sidebar"],
+  [class*="navbar"],
+  [class*="nav"],
+  .fixed,
+  .sticky,
+  .relative,
+  .sticker-panel,
+  .print-sticker-container {
+    display: none !important;
+  }
+
+  .receipt-container,
+  .receipt-print {
+    width: 78mm !important;
+    min-width: 78mm !important;
+    max-width: 78mm !important;
+    padding: 5px 8px !important;
+    font-size: 11px !important;
+    line-height: 1.35 !important;
+    margin: 0 auto !important;
+    background: white !important;
+  }
+
+  .sticker-label {
+    width: 58mm !important;
+    height: 40mm !important;
+    padding: 4px !important;
+    margin: 0 !important;
+    font-size: 9px !important;
+    overflow: hidden;
+  }
+
+  .sticker-label * {
+    display: none !important;
+  }
+
+  .sticker-label .print-content {
+    display: block !important;
+  }
+
+  div[style*="width: 78mm"],
+  div[style*="width: 80mm"] {
+    width: 78mm !important;
+    max-width: 78mm !important;
+  }
+
+  .shift-report-print {
+    display: block !important;
+    width: 80mm !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    background: white !important;
+    color: black !important;
+    font-size: 12px !important;
+    direction: rtl !important;
+  }
+  
+  .shift-report-print * {
+    color: black !important;
+  }
+}
+

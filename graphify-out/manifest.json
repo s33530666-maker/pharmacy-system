@@ -1,0 +1,587 @@
+{
+  "C:\\Users\\DiShA\\code4\\InvoiceEntry.tsx": {
+    "mtime": 1778442902.253189,
+    "ast_hash": "b33fc1376fd90045c6f28fdbaaaad5e9",
+    "semantic_hash": "b33fc1376fd90045c6f28fdbaaaad5e9"
+  },
+  "C:\\Users\\DiShA\\code4\\seed.js": {
+    "mtime": 1778403317.1457305,
+    "ast_hash": "da2b8ecafc8c42797f89a91e21e02eba",
+    "semantic_hash": "da2b8ecafc8c42797f89a91e21e02eba"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\check-db.mjs": {
+    "mtime": 1778900002.6383355,
+    "ast_hash": "5569b22198b2312a46c4d440538f17be",
+    "semantic_hash": "5569b22198b2312a46c4d440538f17be"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\clear-db.js": {
+    "mtime": 1778954073.5813718,
+    "ast_hash": "7d373149486d147c383e2f33f4c77007",
+    "semantic_hash": "7d373149486d147c383e2f33f4c77007"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\package.json": {
+    "mtime": 1778539602.45141,
+    "ast_hash": "091971b1cf32960651eb5ea313211a1f",
+    "semantic_hash": "091971b1cf32960651eb5ea313211a1f"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\reset-admin.js": {
+    "mtime": 1778953324.1418035,
+    "ast_hash": "676a7c291c9c967353f7c4ede15f9d79",
+    "semantic_hash": "676a7c291c9c967353f7c4ede15f9d79"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\test-api-flow.js": {
+    "mtime": 1778955010.6287222,
+    "ast_hash": "ea743b24b812ea850983233f95719a84",
+    "semantic_hash": "ea743b24b812ea850983233f95719a84"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\test-flow.js": {
+    "mtime": 1778953979.4435742,
+    "ast_hash": "a10a5fa05fcb3c91298dbe8ca2a92592",
+    "semantic_hash": "a10a5fa05fcb3c91298dbe8ca2a92592"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260508010632_add_barcode_to_drug\\migration.sql": {
+    "mtime": 1778202392.3045487,
+    "ast_hash": "24499a862e94b628e14f31a6d881fd79",
+    "semantic_hash": "24499a862e94b628e14f31a6d881fd79"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260508124245_add_user_model\\migration.sql": {
+    "mtime": 1778244165.019958,
+    "ast_hash": "fb900c966feb6529b96106d8447a28a9",
+    "semantic_hash": "fb900c966feb6529b96106d8447a28a9"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260508125415_change_auth_to_name_based\\migration.sql": {
+    "mtime": 1778244855.1252744,
+    "ast_hash": "6fe1cc25a03991a112be44df6e7ee26c",
+    "semantic_hash": "6fe1cc25a03991a112be44df6e7ee26c"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260509151925_add_barcode_to_drug\\migration.sql": {
+    "mtime": 1778339965.4887607,
+    "ast_hash": "1a9c4aff6b121f714ef3b377105120b5",
+    "semantic_hash": "1a9c4aff6b121f714ef3b377105120b5"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260509183621_add_barcode_to_drug\\migration.sql": {
+    "mtime": 1778351781.1732142,
+    "ast_hash": "1e7f2cc590788fa6214168026d8b6c43",
+    "semantic_hash": "1e7f2cc590788fa6214168026d8b6c43"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260511195217_init\\migration.sql": {
+    "mtime": 1778529137.078127,
+    "ast_hash": "38ea6e603caa561eb2b622eabae1da90",
+    "semantic_hash": "38ea6e603caa561eb2b622eabae1da90"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260512004528_add_permissions_field\\migration.sql": {
+    "mtime": 1778546728.832106,
+    "ast_hash": "31da7373b0134f44c6ceb32659ad8ff0",
+    "semantic_hash": "31da7373b0134f44c6ceb32659ad8ff0"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260512184247_add_supplier_balance\\migration.sql": {
+    "mtime": 1778611367.7118165,
+    "ast_hash": "0f8b9dbb095f31cd32277e0c719fd5e1",
+    "semantic_hash": "0f8b9dbb095f31cd32277e0c719fd5e1"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\prisma\\migrations\\20260512210159_sale_shift_id_expense_shift_id\\migration.sql": {
+    "mtime": 1778619719.7324822,
+    "ast_hash": "fb0e3f8a82f70b93b9605c8a4444352a",
+    "semantic_hash": "fb0e3f8a82f70b93b9605c8a4444352a"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\scripts\\generate-license.mjs": {
+    "mtime": 1778957382.8592508,
+    "ast_hash": "a067f3df7d7e957068edcc3c8a714144",
+    "semantic_hash": "a067f3df7d7e957068edcc3c8a714144"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\scripts\\importDrugs.js": {
+    "mtime": 1778441517.506479,
+    "ast_hash": "32d8e5be7e72030f5b2b896a362584c9",
+    "semantic_hash": "32d8e5be7e72030f5b2b896a362584c9"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\server.js": {
+    "mtime": 1778957105.0682156,
+    "ast_hash": "1f6159514bda00e4005585fa72d4e585",
+    "semantic_hash": "1f6159514bda00e4005585fa72d4e585"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\config\\db.js": {
+    "mtime": 1778180419.113696,
+    "ast_hash": "3197e8ad2f60fd0fe137effd381bab91",
+    "semantic_hash": "3197e8ad2f60fd0fe137effd381bab91"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\middleware\\auditLogger.js": {
+    "mtime": 1778459095.7389286,
+    "ast_hash": "82d1b47dc7258a66ea525d50954e56df",
+    "semantic_hash": "82d1b47dc7258a66ea525d50954e56df"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\middleware\\auth.middleware.js": {
+    "mtime": 1778673160.0435007,
+    "ast_hash": "f75e626ed594c7c9353f8185ae62e07d",
+    "semantic_hash": "f75e626ed594c7c9353f8185ae62e07d"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\middleware\\licenseCheck.js": {
+    "mtime": 1778956983.4513428,
+    "ast_hash": "4b9a0e21706ff99990fb80c5957fb73b",
+    "semantic_hash": "4b9a0e21706ff99990fb80c5957fb73b"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\middleware\\licenseGuard.js": {
+    "mtime": 1778898271.2089746,
+    "ast_hash": "64c8ae8e3d6cf2b2a0d60aa93e63fd99",
+    "semantic_hash": "64c8ae8e3d6cf2b2a0d60aa93e63fd99"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\middleware\\validation.js": {
+    "mtime": 1778865731.5529907,
+    "ast_hash": "ef1f8579d926de1cb41a106408ce313f",
+    "semantic_hash": "ef1f8579d926de1cb41a106408ce313f"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\alerts\\alerts.controller.js": {
+    "mtime": 1778195546.07871,
+    "ast_hash": "e4546d979498635f58527bd9658db1be",
+    "semantic_hash": "e4546d979498635f58527bd9658db1be"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\alerts\\alerts.routes.js": {
+    "mtime": 1778459333.8796244,
+    "ast_hash": "0f276f27781e8ddf88b46c0ae06b309e",
+    "semantic_hash": "0f276f27781e8ddf88b46c0ae06b309e"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\alerts\\alerts.service.js": {
+    "mtime": 1778195546.07871,
+    "ast_hash": "cb0b61b3a22ef773442f860167ff99c3",
+    "semantic_hash": "cb0b61b3a22ef773442f860167ff99c3"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\alternatives\\alt.controller.js": {
+    "mtime": 1778180372.511286,
+    "ast_hash": "7b1727d2afd7bb8fc5e94506335c9bf7",
+    "semantic_hash": "7b1727d2afd7bb8fc5e94506335c9bf7"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\alternatives\\alt.routes.js": {
+    "mtime": 1778459334.9582322,
+    "ast_hash": "be7c4e04af378badd582a25deae0687d",
+    "semantic_hash": "be7c4e04af378badd582a25deae0687d"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\alternatives\\alt.service.js": {
+    "mtime": 1778194571.458807,
+    "ast_hash": "6548859484046c42bf9ac61833e81a4c",
+    "semantic_hash": "6548859484046c42bf9ac61833e81a4c"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\auth\\auth.controller.js": {
+    "mtime": 1778954893.024735,
+    "ast_hash": "00c2dae84cb78441ac8bf053ef52fe55",
+    "semantic_hash": "00c2dae84cb78441ac8bf053ef52fe55"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\auth\\auth.routes.js": {
+    "mtime": 1778953889.4846416,
+    "ast_hash": "d1cc11ec0bbc8c4536affaddcf44e233",
+    "semantic_hash": "d1cc11ec0bbc8c4536affaddcf44e233"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\backup\\backup.controller.js": {
+    "mtime": 1778263248.4824483,
+    "ast_hash": "a395658b7685534a48b9dc2f8e82cc42",
+    "semantic_hash": "a395658b7685534a48b9dc2f8e82cc42"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\backup\\backup.routes.js": {
+    "mtime": 1778459336.3222232,
+    "ast_hash": "872b79c6296a62eb4d1997d631e35056",
+    "semantic_hash": "872b79c6296a62eb4d1997d631e35056"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\customers\\customers.controller.js": {
+    "mtime": 1778875972.3493664,
+    "ast_hash": "1c116c68363c3efb2f9f502fd226e15d",
+    "semantic_hash": "1c116c68363c3efb2f9f502fd226e15d"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\damaged\\damaged.controller.js": {
+    "mtime": 1778865689.4936852,
+    "ast_hash": "d79a5d7855bcbe039c95a72471387863",
+    "semantic_hash": "d79a5d7855bcbe039c95a72471387863"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\damaged\\damaged.routes.js": {
+    "mtime": 1778862767.0916328,
+    "ast_hash": "7ab4d4b662b15bedd87f833ed7556930",
+    "semantic_hash": "7ab4d4b662b15bedd87f833ed7556930"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\damaged\\damaged.service.js": {
+    "mtime": 1778862487.0091283,
+    "ast_hash": "4a50991fb70a12b3fa15c0e274370012",
+    "semantic_hash": "4a50991fb70a12b3fa15c0e274370012"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\drugs\\batches.routes.js": {
+    "mtime": 1778616341.9892418,
+    "ast_hash": "331d741289eaa01c94a1a09882f526e6",
+    "semantic_hash": "331d741289eaa01c94a1a09882f526e6"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\drugs\\drugs.controller.js": {
+    "mtime": 1778957832.4798522,
+    "ast_hash": "9a0288cf5465d36e660777c2973ee121",
+    "semantic_hash": "9a0288cf5465d36e660777c2973ee121"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\drugs\\drugs.routes.js": {
+    "mtime": 1778866564.8605516,
+    "ast_hash": "17a223b90acd75760740290590736882",
+    "semantic_hash": "17a223b90acd75760740290590736882"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\import\\import.controller.js": {
+    "mtime": 1778878962.2784984,
+    "ast_hash": "56dd26e03991a6ee6ee1f15ab0b718e1",
+    "semantic_hash": "56dd26e03991a6ee6ee1f15ab0b718e1"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\import\\import.routes.js": {
+    "mtime": 1778459342.421852,
+    "ast_hash": "06bf0829b11eac498ce42c3d19c01dce",
+    "semantic_hash": "06bf0829b11eac498ce42c3d19c01dce"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\inventory\\inventory.controller.js": {
+    "mtime": 1778864858.7124205,
+    "ast_hash": "10b608bd672f1b9cdc22e8c0f533cad8",
+    "semantic_hash": "10b608bd672f1b9cdc22e8c0f533cad8"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\inventory\\inventory.routes.js": {
+    "mtime": 1778865069.2962182,
+    "ast_hash": "9058d6a924ef5b2f6f76f88ce627a503",
+    "semantic_hash": "9058d6a924ef5b2f6f76f88ce627a503"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\license\\license.controller.js": {
+    "mtime": 1778956972.1280274,
+    "ast_hash": "9bbb11e00a4a9bc36bb5d221e5e25b80",
+    "semantic_hash": "9bbb11e00a4a9bc36bb5d221e5e25b80"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\license\\license.routes.js": {
+    "mtime": 1778956974.1294086,
+    "ast_hash": "ce5b3eba19b32c0e4357229556ad8f2b",
+    "semantic_hash": "ce5b3eba19b32c0e4357229556ad8f2b"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\license\\license.service.js": {
+    "mtime": 1778956939.3882225,
+    "ast_hash": "e50f6be77a1b4f5fdd57f8a04f22c9fe",
+    "semantic_hash": "e50f6be77a1b4f5fdd57f8a04f22c9fe"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\pos\\customerDebts.controller.js": {
+    "mtime": 1778616428.6240318,
+    "ast_hash": "200bccd6a34d71a6a1968fbad7588bf1",
+    "semantic_hash": "200bccd6a34d71a6a1968fbad7588bf1"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\pos\\customerLedger.controller.js": {
+    "mtime": 1778877718.1491964,
+    "ast_hash": "617760f71f597fdca034b79f602ff987",
+    "semantic_hash": "617760f71f597fdca034b79f602ff987"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\pos\\pos.controller.js": {
+    "mtime": 1778957842.1168177,
+    "ast_hash": "70dd3d66c35aac5998634a294fde3e75",
+    "semantic_hash": "70dd3d66c35aac5998634a294fde3e75"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\pos\\pos.routes.js": {
+    "mtime": 1778616495.9386446,
+    "ast_hash": "b482b4f1d60d5b417ef285d2297b665d",
+    "semantic_hash": "b482b4f1d60d5b417ef285d2297b665d"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\pos\\pos.service.js": {
+    "mtime": 1778957986.3899648,
+    "ast_hash": "84ac7b7f47091b5ad217666e2da1e701",
+    "semantic_hash": "84ac7b7f47091b5ad217666e2da1e701"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\purchases\\purchases.controller.js": {
+    "mtime": 1778860475.119109,
+    "ast_hash": "3a66a8c892f888ad2c5fe9d0c129d511",
+    "semantic_hash": "3a66a8c892f888ad2c5fe9d0c129d511"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\purchases\\purchases.routes.js": {
+    "mtime": 1778459456.4432566,
+    "ast_hash": "e84265d73d37c349b5dcfff2bd2aa13b",
+    "semantic_hash": "e84265d73d37c349b5dcfff2bd2aa13b"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\purchases\\purchases.service.js": {
+    "mtime": 1778860492.235118,
+    "ast_hash": "e11134bc0d2ba3abd766c05cc1d8d436",
+    "semantic_hash": "e11134bc0d2ba3abd766c05cc1d8d436"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\reports\\reports.controller.js": {
+    "mtime": 1778615648.5707922,
+    "ast_hash": "0d3ee7d1a1b30b8a8a273decb0e45109",
+    "semantic_hash": "0d3ee7d1a1b30b8a8a273decb0e45109"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\reports\\reports.routes.js": {
+    "mtime": 1778615653.1934028,
+    "ast_hash": "4d66412a80392577cea813d04b11c871",
+    "semantic_hash": "4d66412a80392577cea813d04b11c871"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\reports\\reports.service.js": {
+    "mtime": 1778624356.004257,
+    "ast_hash": "9d55cfdd08896efce687fe4deedd3bc9",
+    "semantic_hash": "9d55cfdd08896efce687fe4deedd3bc9"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\setup\\setup.controller.js": {
+    "mtime": 1778957154.9258647,
+    "ast_hash": "eeb9dd1fbd8283cb95183402ebe9dc68",
+    "semantic_hash": "eeb9dd1fbd8283cb95183402ebe9dc68"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\setup\\setup.routes.js": {
+    "mtime": 1778898263.2213445,
+    "ast_hash": "ea8f91fb180014f5bae82cad8eb26371",
+    "semantic_hash": "ea8f91fb180014f5bae82cad8eb26371"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\shifts\\shift.controller.js": {
+    "mtime": 1778893262.7836735,
+    "ast_hash": "9bc0b05cd5d459c5fe0351ca38e529b9",
+    "semantic_hash": "9bc0b05cd5d459c5fe0351ca38e529b9"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\shifts\\shift.routes.js": {
+    "mtime": 1778616017.1634715,
+    "ast_hash": "3d2e7bdc160cab60c182a83118815465",
+    "semantic_hash": "3d2e7bdc160cab60c182a83118815465"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\shifts\\shift.service.js": {
+    "mtime": 1778893208.2562842,
+    "ast_hash": "237b1236d6c356311677ec793eb9effd",
+    "semantic_hash": "237b1236d6c356311677ec793eb9effd"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\supplierDebts\\supplierDebts.controller.js": {
+    "mtime": 1778460226.1193383,
+    "ast_hash": "ce941a18de15ab962d0c05e33097fdf0",
+    "semantic_hash": "ce941a18de15ab962d0c05e33097fdf0"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\supplierDebts\\supplierDebts.routes.js": {
+    "mtime": 1778460230.8970666,
+    "ast_hash": "d32b2454717caafb05c92b7696cfb204",
+    "semantic_hash": "d32b2454717caafb05c92b7696cfb204"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\suppliers\\suppliers.controller.js": {
+    "mtime": 1778860425.97154,
+    "ast_hash": "8e93c9feb20bfe24ae7145818dabd1f4",
+    "semantic_hash": "8e93c9feb20bfe24ae7145818dabd1f4"
+  },
+  "C:\\Users\\DiShA\\code4\\backend\\src\\modules\\suppliers\\suppliers.routes.js": {
+    "mtime": 1778860449.88268,
+    "ast_hash": "0f68d0327116e67bdfde66bd6124ae79",
+    "semantic_hash": "0f68d0327116e67bdfde66bd6124ae79"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\package.json": {
+    "mtime": 1778853641.2102096,
+    "ast_hash": "f5a2a9126cc1b8453f1e46ede7c3f6dd",
+    "semantic_hash": "f5a2a9126cc1b8453f1e46ede7c3f6dd"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\postcss.config.js": {
+    "mtime": 1778180038.2464101,
+    "ast_hash": "5b84f4567208c7c747079c0477373231",
+    "semantic_hash": "5b84f4567208c7c747079c0477373231"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\tailwind.config.js": {
+    "mtime": 1778261740.7139206,
+    "ast_hash": "904f6d3f4688dce41b17d0c9e7223d9a",
+    "semantic_hash": "904f6d3f4688dce41b17d0c9e7223d9a"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\vite.config.js": {
+    "mtime": 1778954946.752277,
+    "ast_hash": "c3de5acb171fb26d74993e80999e1c00",
+    "semantic_hash": "c3de5acb171fb26d74993e80999e1c00"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\App.jsx": {
+    "mtime": 1778957210.292228,
+    "ast_hash": "6714e47510663f5a8edd4488e6e6854c",
+    "semantic_hash": "6714e47510663f5a8edd4488e6e6854c"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\main.jsx": {
+    "mtime": 1778180047.3423166,
+    "ast_hash": "be1ec1931e7070477f01cf63e2732ea9",
+    "semantic_hash": "be1ec1931e7070477f01cf63e2732ea9"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\LicenseBanner.jsx": {
+    "mtime": 1778958306.5587492,
+    "ast_hash": "519bee55dca53332ac3a809cfb57a96c",
+    "semantic_hash": "519bee55dca53332ac3a809cfb57a96c"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\MainLayout.jsx": {
+    "mtime": 1778894002.546592,
+    "ast_hash": "c50a49787c1a75ac014640d693e70947",
+    "semantic_hash": "c50a49787c1a75ac014640d693e70947"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\Sidebar.jsx": {
+    "mtime": 1778952813.6888518,
+    "ast_hash": "7bfb0796643e30650a536667a1a77b82",
+    "semantic_hash": "7bfb0796643e30650a536667a1a77b82"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\shared\\AlertBanner.jsx": {
+    "mtime": 1778634910.043398,
+    "ast_hash": "d99c2bfdeb65821d1a4ba72f0ea872fc",
+    "semantic_hash": "d99c2bfdeb65821d1a4ba72f0ea872fc"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\shared\\DrugAlternativesModal.jsx": {
+    "mtime": 1778952813.6852705,
+    "ast_hash": "7a518b6d8dbe6179e6e3aada82a3fe6a",
+    "semantic_hash": "7a518b6d8dbe6179e6e3aada82a3fe6a"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\shared\\DrugImporter.jsx": {
+    "mtime": 1778634925.0970366,
+    "ast_hash": "c7a6bbe7564280de810ca8c435aa0fad",
+    "semantic_hash": "c7a6bbe7564280de810ca8c435aa0fad"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\components\\shared\\ReceiptPrint.jsx": {
+    "mtime": 1778958175.2596903,
+    "ast_hash": "1c2188159d7eeb9ff6d22ce6495a0658",
+    "semantic_hash": "1c2188159d7eeb9ff6d22ce6495a0658"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\context\\AuthContext.jsx": {
+    "mtime": 1778953935.3982217,
+    "ast_hash": "3a7a16f3ee33d3e76b60109e8aecc36d",
+    "semantic_hash": "3a7a16f3ee33d3e76b60109e8aecc36d"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\context\\LicenseContext.jsx": {
+    "mtime": 1778958304.5467033,
+    "ast_hash": "c74b425d85bdd92ecee93836e498fcc2",
+    "semantic_hash": "c74b425d85bdd92ecee93836e498fcc2"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\context\\ThemeContext.jsx": {
+    "mtime": 1778261738.9469097,
+    "ast_hash": "2de68e9428184af25cfe29a026e10870",
+    "semantic_hash": "2de68e9428184af25cfe29a026e10870"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\db\\dexie.js": {
+    "mtime": 1778892255.6513994,
+    "ast_hash": "740aeb98273b425f90b0eeafdf11bf43",
+    "semantic_hash": "740aeb98273b425f90b0eeafdf11bf43"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\hooks\\useAutoRefresh.js": {
+    "mtime": 1778883685.0548136,
+    "ast_hash": "c0b1cc645f5db17522ca59e7cab8c27e",
+    "semantic_hash": "c0b1cc645f5db17522ca59e7cab8c27e"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\ActivationPage.jsx": {
+    "mtime": 1778787622.5218205,
+    "ast_hash": "47cd7c7187d3feec4d72371cfc383708",
+    "semantic_hash": "47cd7c7187d3feec4d72371cfc383708"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\CustomerDebts.jsx": {
+    "mtime": 1778952813.6899867,
+    "ast_hash": "0f0135258cab6d3d6cdde929f5155a6c",
+    "semantic_hash": "0f0135258cab6d3d6cdde929f5155a6c"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\DrugsManagement.jsx": {
+    "mtime": 1778952813.693273,
+    "ast_hash": "663ba9db90a77cd806177df97073f020",
+    "semantic_hash": "663ba9db90a77cd806177df97073f020"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\InventoryAuditTab.jsx": {
+    "mtime": 1778952813.6943202,
+    "ast_hash": "17c713f1071ff9d47fbc67ad23181398",
+    "semantic_hash": "17c713f1071ff9d47fbc67ad23181398"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\InventoryList.jsx": {
+    "mtime": 1778886331.6151164,
+    "ast_hash": "fff3be19c9d11ce447ef34f4fc0b4025",
+    "semantic_hash": "fff3be19c9d11ce447ef34f4fc0b4025"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\InventoryPage.jsx": {
+    "mtime": 1778885628.2033105,
+    "ast_hash": "3cac27f9df0c5c96230aed7ce755c94d",
+    "semantic_hash": "3cac27f9df0c5c96230aed7ce755c94d"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\LicenseExpiredPage.jsx": {
+    "mtime": 1778957259.2242377,
+    "ast_hash": "ef4c1675d40f5d6c8c7a5ef64bc90daa",
+    "semantic_hash": "ef4c1675d40f5d6c8c7a5ef64bc90daa"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\LoginPage.jsx": {
+    "mtime": 1778899596.707958,
+    "ast_hash": "e7968262b2ab22536a63ef99c4ec0594",
+    "semantic_hash": "e7968262b2ab22536a63ef99c4ec0594"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\ManageUsers.jsx": {
+    "mtime": 1778955241.280024,
+    "ast_hash": "3df5980e7892322e01942868dfb17a10",
+    "semantic_hash": "3df5980e7892322e01942868dfb17a10"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\Returns.jsx": {
+    "mtime": 1778952813.6983087,
+    "ast_hash": "0dd684aaa9873e1dc25ac534a8817eca",
+    "semantic_hash": "0dd684aaa9873e1dc25ac534a8817eca"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\SalesHistory.jsx": {
+    "mtime": 1778952967.2226272,
+    "ast_hash": "7dd74d36b19c99627601f367fb5c9b23",
+    "semantic_hash": "7dd74d36b19c99627601f367fb5c9b23"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\SettingsPage.jsx": {
+    "mtime": 1778957358.5821235,
+    "ast_hash": "f2f6729727772f56ee331eb640d694dd",
+    "semantic_hash": "f2f6729727772f56ee331eb640d694dd"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\SetupPage.jsx": {
+    "mtime": 1778957341.635283,
+    "ast_hash": "6dc07d9bb87879d1ad26cb097e241070",
+    "semantic_hash": "6dc07d9bb87879d1ad26cb097e241070"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\ShiftReports.jsx": {
+    "mtime": 1778680629.1381252,
+    "ast_hash": "4be0cd400dd75b7269cd8d5056e7021f",
+    "semantic_hash": "4be0cd400dd75b7269cd8d5056e7021f"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\SupplierDebts.jsx": {
+    "mtime": 1778952813.7013385,
+    "ast_hash": "3494e5083c4cc3b96c9eca4cfa5bf916",
+    "semantic_hash": "3494e5083c4cc3b96c9eca4cfa5bf916"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\SuppliersPage.jsx": {
+    "mtime": 1778952813.701532,
+    "ast_hash": "8c270d5f13aee69b6015897a15ba8763",
+    "semantic_hash": "8c270d5f13aee69b6015897a15ba8763"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\customers\\CustomersPage.jsx": {
+    "mtime": 1778952813.6911478,
+    "ast_hash": "dc6a8f1a271089f855c4bd91bd92d86c",
+    "semantic_hash": "dc6a8f1a271089f855c4bd91bd92d86c"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\damaged\\DamagedDrugsPage.jsx": {
+    "mtime": 1778953021.190496,
+    "ast_hash": "124914aebe78cad6e72b9c4cd87501fe",
+    "semantic_hash": "124914aebe78cad6e72b9c4cd87501fe"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\dashboard\\Dashboard.jsx": {
+    "mtime": 1778678459.0804932,
+    "ast_hash": "4738d6cf04295f11e479d1e5be5fb4e0",
+    "semantic_hash": "4738d6cf04295f11e479d1e5be5fb4e0"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\pos\\POSPage.jsx": {
+    "mtime": 1778958164.0086882,
+    "ast_hash": "2159e261d79d6d84914677b18074df38",
+    "semantic_hash": "2159e261d79d6d84914677b18074df38"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\purchases\\PurchasesPage.jsx": {
+    "mtime": 1778952813.6975887,
+    "ast_hash": "ca8e7bae5cfc2280d73d6c262788bb4b",
+    "semantic_hash": "ca8e7bae5cfc2280d73d6c262788bb4b"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\pages\\shifts\\ShiftManager.jsx": {
+    "mtime": 1778952813.7010005,
+    "ast_hash": "252bf1c37167013cf44070c71de2be91",
+    "semantic_hash": "252bf1c37167013cf44070c71de2be91"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\utils\\api.js": {
+    "mtime": 1778954948.759556,
+    "ast_hash": "7fe4cac4564b2b2ff0d7fe0cae737a3c",
+    "semantic_hash": "7fe4cac4564b2b2ff0d7fe0cae737a3c"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\src\\utils\\keyboard.js": {
+    "mtime": 1778439764.2366276,
+    "ast_hash": "a3b1036e8675b5234fbcdbd43484c454",
+    "semantic_hash": "a3b1036e8675b5234fbcdbd43484c454"
+  },
+  "C:\\Users\\DiShA\\code4\\src\\context\\ThemeContext.jsx": {
+    "mtime": 1778261731.1426795,
+    "ast_hash": "2de68e9428184af25cfe29a026e10870",
+    "semantic_hash": "2de68e9428184af25cfe29a026e10870"
+  },
+  "C:\\Users\\DiShA\\code4\\.agents\\rules\\graphify.md": {
+    "mtime": 1778958593.3792298,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": "a0e4d192b9e2e17256124dbfc8e24e6a"
+  },
+  "C:\\Users\\DiShA\\code4\\.agents\\workflows\\graphify.md": {
+    "mtime": 1778958593.3793774,
+    "ast_hash": "84de69efd46ab0b8430393bd4188f8f2",
+    "semantic_hash": "84de69efd46ab0b8430393bd4188f8f2"
+  },
+  "C:\\Users\\DiShA\\code4\\graphify-out\\converted\\egyptian-drugs_29437eb0.md": {
+    "mtime": 1778958729.9956086,
+    "ast_hash": "c9eccb4a19f3fd090edae7da65847648",
+    "semantic_hash": "c9eccb4a19f3fd090edae7da65847648"
+  },
+  "C:\\Users\\DiShA\\code4\\frontend\\index.html": {
+    "mtime": 1778680394.468427,
+    "ast_hash": "1ba12de1cbca0721db578606e11c5f4b",
+    "semantic_hash": "1ba12de1cbca0721db578606e11c5f4b"
+  }
+}
