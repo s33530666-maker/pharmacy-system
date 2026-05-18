@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import Barcode from 'react-barcode';
 import * as XLSX from 'xlsx';
 import { Trash2, Plus, Save, AlertCircle, ScanBarcode, X, Tag, CheckSquare, Square, Printer, Upload } from 'lucide-react';
@@ -417,7 +417,7 @@ const fetchSuppliers = useCallback(async () => {
     } catch { }
   }, []);
 
-  const filteredSuppliers = React.useMemo(() => {
+  const filteredSuppliers = useMemo(() => {
     const list = Array.isArray(suppliers) ? suppliers : [];
     const query = supplierFilter.trim().toLowerCase();
     if (!query) return list;

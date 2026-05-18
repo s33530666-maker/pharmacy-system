@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isTempAdmin, setIsTempAdmin] = useState(false);
 
-  const usersCache = React.useRef({
+  const usersCache = useRef({
     activeUsers: { data: null, timestamp: 0 },
     allUsers: { data: null, timestamp: 0 },
   });

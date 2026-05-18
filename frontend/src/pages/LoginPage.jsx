@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
@@ -174,7 +174,7 @@ export default function LoginPage() {
 
   const { isDark } = useTheme();
 
-  const theme = React.useMemo(() => createTheme({
+  const theme = useMemo(() => createTheme({
     direction: 'rtl',
     palette: {
       mode: isDark ? 'dark' : 'light',
