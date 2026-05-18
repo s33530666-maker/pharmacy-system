@@ -3,159 +3,181 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import { PrismaClient } from '@prisma/client';
 import os from 'os';
+
+import prisma from './config/db.js';
+import { JWT_SECRET } from './config/jwt.js';
+import auditLog from './middleware/auditLogger.js';
+import { licenseCheck } from './middleware/licenseCheck.js';
+
+import licenseRoutes from './modules/license/license.routes.js';
+import setupRoutes from './modules/setup/setup.routes.js';
+import authRoutes from './modules/auth/auth.routes.js';
+import alternativesRoutes from './modules/alternatives/alt.routes.js';
+import posRoutes from './modules/pos/pos.routes.js';
+import purchasesRoutes from './modules/purchases/purchases.routes.js';
+import drugsRoutes from './modules/drugs/drugs.routes.js';
+import suppliersRoutes from './modules/suppliers/suppliers.routes.js';
+import supplierDebtsRoutes from './modules/supplierDebts/supplierDebts.routes.js';
+import reportsRoutes from './modules/reports/reports.routes.js';
+import shiftRoutes from './modules/shifts/shift.routes.js';
+import damagedRoutes from './modules/damaged/damaged.routes.js';
+import inventoryRoutes from './modules/inventory/inventory.routes.js';
+import alertsRoutes from './modules/alerts/alerts.routes.js';
+import importRoutes from './modules/import/import.routes.js';
+import batchesRoutes from './modules/drugs/batches.routes.js';
+import backupRoutes from './modules/backup/backup.routes.js';
+import customersRoutes from './modules/customers/customers.controller.js';
+import settingsRoutes from './modules/settings/settings.routes.js';
 
 dotenv.config();
 
 const app = express();
-const prisma = new PrismaClient();
 const PORT = process.env.PORT || 3001;
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
+const isProd = process.env.NODE_ENV === 'production';
 
+// --- Security ---
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+    crossOriginEmbedderPolicy: false,
+  })
+);
 
-// Security Middleware
-app.use(helmet({
-  contentSecurityPolicy: false,
-  crossOriginEmbedderPolicy: false,
-}));
+app.use(
+  cors({
+    origin: isProd
+      ? process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:5173']
+      : true,
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+  })
+);
 
-app.use(cors({
-  origin: process.env.NODE_ENV === 'production' 
-    ? process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:5173']
-    : true,
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-}));
-
-// Rate limiting
+// --- Rate limiting ---
 const generalLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 1000, // Increased for legitimate use
+  windowMs: 15 * 60 * 1000,
+  max: 1000,
   message: { error: 'Too many requests, please try again later.' },
   standardHeaders: true,
   legacyHeaders: false,
 });
 
 const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 20, // Strict limit for login/register endpoints
-  message: { error: 'Too many authentication attempts, please try again later.' },
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-
-const authRelaxedLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 200, // Relaxed limit for other auth endpoints (users, public)
+  windowMs: 15 * 60 * 1000,
+  max: 200,
   message: { error: 'Too many requests, please try again later.' },
   standardHeaders: true,
   legacyHeaders: false,
 });
 
 const importLimiter = rateLimit({
-  windowMs: 60 * 60 * 1000, // 1 hour
-  max: 10, // Limit import operations
+  windowMs: 60 * 60 * 1000,
+  max: 10,
   message: { error: 'Too many import requests, please try again later.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+const backupLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+  message: { error: 'Too many backup requests, please try again later.' },
   standardHeaders: true,
   legacyHeaders: false,
 });
 
 app.use(generalLimiter);
 
-// Body parsing with size limits
+// --- Body parsing ---
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
-// Health check
+// --- Health check ---
 app.get('/health', (req, res) => {
-  res.json({ status: 'OK', message: 'Pharmacy System API is running', timestamp: new Date().toISOString() });
+  res.json({
+    status: 'OK',
+    message: 'Pharmacy System API is running',
+    timestamp: new Date().toISOString(),
+  });
 });
 
-// Import audit logger utility
-import auditLog from './middleware/auditLogger.js';
-import { licenseCheck } from './middleware/licenseCheck.js';
-
-// License check — blocks non-license API calls when license invalid/expired
+// --- License gate (skips license/setup/login itself) ---
 app.use(licenseCheck);
 
-// API Routes with auth middleware and rate limiting
-app.use('/api/license', (await import('./modules/license/license.routes.js')).default);
-app.use('/api/setup', authRelaxedLimiter, (await import('./modules/setup/setup.routes.js')).default);
-app.use('/api/auth', authRelaxedLimiter, auditLog, (await import('./modules/auth/auth.routes.js')).default);
-app.use('/api/alternatives', (await import('./modules/alternatives/alt.routes.js')).default);
-app.use('/api/pos', (await import('./modules/pos/pos.routes.js')).default);
-app.use('/api/purchases', (await import('./modules/purchases/purchases.routes.js')).default);
-app.use('/api/drugs', (await import('./modules/drugs/drugs.routes.js')).default);
-app.use('/api/suppliers', (await import('./modules/suppliers/suppliers.routes.js')).default);
-app.use('/api/supplier-debts', (await import('./modules/supplierDebts/supplierDebts.routes.js')).default);
-app.use('/api/reports', (await import('./modules/reports/reports.routes.js')).default);
-app.use('/api/shifts', (await import('./modules/shifts/shift.routes.js')).default);
-app.use('/api/damaged', (await import('./modules/damaged/damaged.routes.js')).default);
-app.use('/api/inventory', (await import('./modules/inventory/inventory.routes.js')).default);
-app.use('/api/alerts', (await import('./modules/alerts/alerts.routes.js')).default);
-app.use('/api/import', importLimiter, (await import('./modules/import/import.routes.js')).default);
-app.use('/api/batches', (await import('./modules/drugs/batches.routes.js')).default);
-app.use('/api/backup', authLimiter, (await import('./modules/backup/backup.routes.js')).default);
-app.use('/api/customers', (await import('./modules/customers/customers.controller.js')).default);
-app.use('/api/settings', (await import('./modules/settings/settings.routes.js')).default);
+// --- Routes ---
+app.use('/api/license', licenseRoutes);
+app.use('/api/setup', authLimiter, setupRoutes);
+app.use('/api/auth', authLimiter, auditLog, authRoutes);
+app.use('/api/alternatives', alternativesRoutes);
+app.use('/api/pos', posRoutes);
+app.use('/api/purchases', purchasesRoutes);
+app.use('/api/drugs', drugsRoutes);
+app.use('/api/suppliers', suppliersRoutes);
+app.use('/api/supplier-debts', supplierDebtsRoutes);
+app.use('/api/reports', reportsRoutes);
+app.use('/api/shifts', shiftRoutes);
+app.use('/api/damaged', damagedRoutes);
+app.use('/api/inventory', inventoryRoutes);
+app.use('/api/alerts', alertsRoutes);
+app.use('/api/import', importLimiter, importRoutes);
+app.use('/api/batches', batchesRoutes);
+app.use('/api/backup', backupLimiter, backupRoutes);
+app.use('/api/customers', customersRoutes);
+app.use('/api/settings', settingsRoutes);
 
-// 404 handler
+// --- 404 ---
 app.use((req, res) => {
   res.status(404).json({ error: 'Endpoint not found' });
 });
 
-// Global error handling middleware
-app.use((err, req, res, next) => {
+// --- Global error handler ---
+// eslint-disable-next-line no-unused-vars
+app.use((err, req, res, _next) => {
   console.error('Unhandled error:', err);
-  
-  // Don't expose internal error details in production
-  if (process.env.NODE_ENV === 'production') {
-    res.status(500).json({ error: 'An unexpected error occurred' });
-  } else {
-    res.status(500).json({ 
-      error: 'Internal server error',
-      message: err.message,
-      stack: err.stack
-    });
+  if (isProd) {
+    return res.status(err.status || 500).json({ error: 'An unexpected error occurred' });
   }
+  return res.status(err.status || 500).json({
+    error: 'Internal server error',
+    message: err.message,
+  });
 });
 
-// Graceful shutdown
-process.on('SIGINT', async () => {
-  console.log('Shutting down gracefully...');
-  await prisma.$disconnect();
+// --- Graceful shutdown ---
+const shutdown = async (signal) => {
+  console.log(`${signal} received. Shutting down gracefully...`);
+  try {
+    await prisma.$disconnect();
+  } catch (e) {
+    console.error('Error disconnecting Prisma:', e.message);
+  }
   process.exit(0);
-});
+};
+process.on('SIGINT', () => shutdown('SIGINT'));
+process.on('SIGTERM', () => shutdown('SIGTERM'));
 
-process.on('SIGTERM', async () => {
-  console.log('Shutting down gracefully...');
-  await prisma.$disconnect();
-  process.exit(0);
-});
-
-function getLocalIP() {
+// --- Listen ---
+const getLocalIP = () => {
   const interfaces = os.networkInterfaces();
   for (const name of Object.keys(interfaces)) {
     for (const iface of interfaces[name]) {
-      if (iface.family === 'IPv4' && !iface.internal) {
-        return iface.address;
-      }
+      if (iface.family === 'IPv4' && !iface.internal) return iface.address;
     }
   }
   return 'localhost';
-}
+};
 
 const LOCAL_IP = getLocalIP();
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`\n🚀 Pharmacy System API is running on http://localhost:${PORT}`);
-  console.log(`🌐 Network: http://${LOCAL_IP}:${PORT}`);
-  console.log(`📊 API Health Check: http://${LOCAL_IP}:${PORT}/health`);
-  console.log(`🔐 JWT Secret: ${JWT_SECRET === 'your-secret-key-change-in-production' ? '⚠️ Using default secret - CHANGE IN PRODUCTION!' : '✅ Configured'}`);
-  console.log(`🔒 Rate limiting: ${process.env.NODE_ENV === 'production' ? 'Enabled' : 'Development mode'}\n`);
+  console.log(`\nPharmacy System API running on http://localhost:${PORT}`);
+  console.log(`Network: http://${LOCAL_IP}:${PORT}`);
+  console.log(`Health: http://${LOCAL_IP}:${PORT}/health`);
+  if (JWT_SECRET === 'your-secret-key-change-in-production') {
+    console.warn('WARNING: Using default JWT secret. Set JWT_SECRET in production.');
+  }
 });
 
-export { JWT_SECRET };
 export default app;

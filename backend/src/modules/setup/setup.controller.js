@@ -1,14 +1,10 @@
 import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
 import prisma from '../../config/db.js';
+import { signUserToken } from '../../config/jwt.js';
 import { licenseService } from '../license/license.service.js';
-
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
 /**
  * GET /api/setup/status
- * Returns { needsSetup: true } if no users exist, { needsSetup: false } otherwise.
- * No auth required.
  */
 export const getSetupStatus = async (req, res) => {
   try {
@@ -22,12 +18,10 @@ export const getSetupStatus = async (req, res) => {
 
 /**
  * POST /api/setup/initialize
- * Creates the first admin user + starts 14-day trial license.
- * Blocked (403) if any user already exists.
+ * Creates the first admin user + 14-day trial license. Blocked once any user exists.
  */
 export const initializeSystem = async (req, res) => {
   try {
-    // Guard: only works when zero users exist
     const userCount = await prisma.user.count();
     if (userCount > 0) {
       return res.status(403).json({ error: 'تم إعداد النظام مسبقاً. لا يمكن إعادة الإعداد.' });
@@ -35,7 +29,6 @@ export const initializeSystem = async (req, res) => {
 
     const { name, password, pharmacyName } = req.body;
 
-    // Validation
     if (!name || !password) {
       return res.status(400).json({ error: 'اسم المدير وكلمة المرور مطلوبان.' });
     }
@@ -47,9 +40,8 @@ export const initializeSystem = async (req, res) => {
     }
 
     const resolvedPharmacyName = (pharmacyName || name).trim();
-
-    // Create the first admin
     const hash = await bcrypt.hash(password, 10);
+
     const user = await prisma.user.create({
       data: {
         name: name.trim(),
@@ -61,22 +53,13 @@ export const initializeSystem = async (req, res) => {
       },
     });
 
-    // Start 14-day trial license automatically
     try {
       await licenseService.generateTrialLicense(resolvedPharmacyName);
-      console.log(`✅ [Setup] Trial license created for: ${resolvedPharmacyName}`);
     } catch (licErr) {
       console.warn('[Setup] License trial init warning:', licErr.message);
     }
 
-    // Sign JWT so frontend can log the user in immediately
-    const token = jwt.sign(
-      { id: user.id, name: user.name, role: user.role },
-      JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRES_IN || '24h' }
-    );
-
-    console.log(`✅ [Setup] First admin created: ${user.name}`);
+    const token = signUserToken(user);
 
     return res.status(201).json({
       success: true,

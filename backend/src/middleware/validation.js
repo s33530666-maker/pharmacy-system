@@ -167,8 +167,6 @@ export const validateBody = (schema) => {
           field: issue.path.join('.'),
           message: issue.message,
         }));
-        console.log('=== ZOD VALIDATION ERRORS ===', result.error.issues);
-        console.log('=== MAPPED ERRORS ===', JSON.stringify(errors, null, 2));
         return res.status(400).json({
           success: false,
           message: 'Validation failed',

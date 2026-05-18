@@ -1,7 +1,5 @@
-import { PrismaClient } from '@prisma/client';
+import prisma from '../../config/db.js';
 import XLSX from 'xlsx';
-
-const prisma = new PrismaClient();
 
 const generateInternalBarcode = () => {
     // بيعمل رقم عشوائي من 8 أرقام

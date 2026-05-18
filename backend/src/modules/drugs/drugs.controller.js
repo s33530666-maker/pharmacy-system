@@ -75,12 +75,6 @@ export const getAllDrugs = async (req, res) => {
       prisma.drug.count({ where }),
     ]);
 
-    console.log('[DEBUG] Total drugs in DB:', totalCount);
-    console.log('[DEBUG] Drugs returned:', drugs.length);
-    if (drugs.length > 0) {
-      console.log('[DEBUG] First drug:', { name: drugs[0].name, status: drugs[0].status, stock: drugs[0].stock });
-    }
-
     const drugsWithAvailability = drugs.map(drug => {
       const totalBatchStock = drug.batches.reduce((sum, b) => sum + b.quantity, 0);
       
@@ -307,9 +301,6 @@ export const updateDrug = async (req, res) => {
       costPrice,
     } = req.body;
 
-    console.log('[updateDrug] Received body:', JSON.stringify(req.body));
-    console.log('[updateDrug] stock value:', stock, 'type:', typeof stock);
-
     const existingDrug = await prisma.drug.findUnique({
       where: { id },
     });
@@ -386,14 +377,10 @@ export const updateDrug = async (req, res) => {
       updateData.costPrice = parsedCostPrice;
     }
 
-    console.log('[updateDrug] updateData to be sent:', JSON.stringify(updateData));
-
     const drug = await prisma.drug.update({
       where: { id },
       data: updateData,
     });
-
-    console.log('[updateDrug] Updated drug:', JSON.stringify(drug));
 
     res.status(200).json({
       success: true,
@@ -462,7 +449,6 @@ export const deleteDrug = async (req, res) => {
 
 export const adjustInventory = async (req, res) => {
   try {
-    console.log('[DEBUG] Inventory adjust request:', req.body);
     const { adjustments } = req.body;
 
     if (!Array.isArray(adjustments) || adjustments.length === 0) {
